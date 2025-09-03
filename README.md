@@ -152,13 +152,6 @@ def max_subarray_sum(n, seed, min_val, max_val):
 - **Anthropic Claude 3.5 Sonnet**: Advanced reasoning and code optimization
 - **CodeQwen 1.5-7B**: Specialized code generation model from Alibaba
 
-### Compiler Optimizations
-
-The tool automatically applies platform-specific optimizations:
-
-- **macOS (Apple Silicon)**: `-Ofast -std=c++17 -march=armv8.5-a -mtune=apple-m1 -mcpu=apple-m1`
-- **Linux**: `-O3 -std=c++17` with GCC or Clang
-- **Windows**: Visual Studio compiler with optimization flags
 
 ### Performance Features
 
@@ -167,29 +160,7 @@ The tool automatically applies platform-specific optimizations:
 - **Type Safety**: Automatic handling of integer overflow prevention
 - **Platform Detection**: Automatic compiler and architecture detection
 
-## API Documentation
 
-### Core Functions
-
-#### `optimize_gpt(python_code)`
-Converts Python code to C++ using OpenAI GPT-4.
-
-#### `optimize_claude(python_code)`
-Converts Python code to C++ using Anthropic Claude.
-
-#### `stream_code_qwen(python_code)`
-Converts Python code to C++ using HuggingFace CodeQwen with streaming.
-
-#### `execute_python(code)`
-Executes Python code and captures output.
-
-#### `execute_cpp(code)`
-Compiles and executes C++ code, returns output or error messages.
-
-### Platform Support
-
-#### `c_compiler_cmd(filename_base)`
-Automatically detects available C++ compilers and returns appropriate compilation commands for the current platform.
 
 ## Contributing
 
@@ -201,22 +172,10 @@ Automatically detects available C++ compilers and returns appropriate compilatio
 
 ## License
 
-This project is open source. Please check the repository for license details.
+This project is open source. 
 
-## Troubleshooting
 
-### Common Issues
 
-1. **API Key Errors**: Ensure your API keys are correctly set in the `.env` file
-2. **Compiler Not Found**: Install the appropriate C++ compiler for your platform
-3. **HuggingFace Endpoint Issues**: Check your HF_TOKEN and endpoint URLs
-4. **Memory Issues**: For large programs, consider reducing iteration counts in sample programs
-
-### Performance Tips
-
-- Use Apple Silicon optimizations on M1/M2 Macs for best performance
-- Enable compiler optimizations appropriate for your target platform
-- Test with smaller datasets first before scaling up
 
 ## Acknowledgments
 
